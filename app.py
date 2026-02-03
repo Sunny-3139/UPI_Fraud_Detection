@@ -71,8 +71,6 @@ def predict():
         state = request.form.get('state')
         trans_time = request.form.get('trans_time')
         seller_name = request.form.get('seller_name')
-        dob = request.form.get('dob')
-        pin_code = request.form.get('pin_code')
         amount = float(request.form.get('amount', 0))
         merchant_category = request.form.get('merchant_category')
         
@@ -84,16 +82,6 @@ def predict():
                 trans_datetime = datetime.datetime.strptime(trans_time, '%Y-%m-%dT%H:%M')
                 hour = trans_datetime.hour
                 day_of_week = trans_datetime.weekday()
-            except:
-                pass
-        
-        # Parse date of birth to calculate age
-        age = 30  # default
-        if dob:
-            try:
-                dob_datetime = datetime.datetime.strptime(dob, '%Y-%m-%d')
-                current_year = datetime.datetime.now().year
-                age = current_year - dob_datetime.year
             except:
                 pass
         
@@ -109,15 +97,13 @@ def predict():
             merchant_encoded = 0
         
         # Prepare features in the same order as training
-        # Order: Pincode, Amount_Rs, Merchant_Category, State, hour, day_of_week, age
+        # Order: Amount_Rs, Merchant_Category, State, hour, day_of_week
         features = np.array([[
-            float(pin_code) if pin_code else 0,
             amount,
             merchant_encoded,
             state_encoded,
             hour,
-            day_of_week,
-            age
+            day_of_week
         ]])
         
         # Standardize using the saved scaler

@@ -1,41 +1,93 @@
-UPI_Number,Holder_Name,State,Transaction_DateTime,Seller_Name,Date_of_Birth,Pincode,Amount_Rs,Merchant_Category,Fraud_Label
-9876543210,Rajesh Kumar,Maharashtra,2024-01-15 14:30,ABC Electronics,1990-05-12,400001,5000,Shopping,0
-9123456789,Priya Sharma,Karnataka,2024-01-15 02:45,XYZ Convenience,1995-08-22,560001,25000,Cash Out / Transfer,1
-8765432109,Amit Patel,Gujarat,2024-01-16 10:15,Quick Meals,1988-03-18,380001,350,Food & Dining,0
-9012345678,Neha Verma,Delhi,2024-01-16 22:30,Late Night Store,1992-11-05,110001,8500,Shopping,1
-9234567890,Rohan Singh,Punjab,2024-01-17 09:45,Health Plus,1993-07-14,160001,2500,Healthcare,0
-9345678901,Anjali Gupta,Tamil Nadu,2024-01-17 15:20,Fashion Hub,1996-02-28,600001,15000,Shopping,0
-9456789012,Vikram Nair,Kerala,2024-01-18 11:00,Travel Booking,1989-12-03,690001,45000,Travel,1
-9567890123,Divya Reddy,Telangana,2024-01-18 19:30,Movie Tickets,1994-06-19,500001,800,Entertainment,0
-9678901234,Arjun Rao,Bangalore,2024-01-19 03:15,Night Market,1991-09-25,560034,12000,Groceries,1
-9789012345,Sneha Kapoor,Mumbai,2024-01-19 13:45,Power Supply,1987-04-10,400050,1200,Bills & Utilities,0
-9801234567,Karan Malhotra,Pune,2024-01-20 08:30,Medical Store,1993-10-17,411001,3500,Healthcare,0
-9912345678,Shruti Yadav,Hyderabad,2024-01-20 21:00,Petrol Pump,1990-01-22,500032,2000,Fuel,0
-8876543210,Harsh Dubey,Lucknow,2024-01-21 02:30,ATM Cash Out,1988-05-08,226001,50000,Cash Out / Transfer,1
-8987654321,Pooja Singh,Jaipur,2024-01-21 14:15,Book Store,1995-11-30,302001,1800,Education,0
-9098765432,Rahul Verma,Chandigarh,2024-01-22 10:00,Restaurant,1989-08-12,160001,1500,Food & Dining,0
-9109876543,Zara Khan,Ahmedabad,2024-01-22 16:45,Fashion Store,1992-03-25,380002,8000,Shopping,0
-9210987654,Nikhil Joshi,Surat,2024-01-23 04:00,Late Night Transfer,1991-07-19,395001,35000,Cash Out / Transfer,1
-9321098765,Megha Chopra,Indore,2024-01-23 12:30,Grocery Store,1994-09-05,452001,2200,Groceries,0
-9432109876,Suresh Kumar,Bhopal,2024-01-24 09:15,Phone Recharge,1987-02-14,462001,500,Online Services,0
-9543210987,Ananya Desai,Vadodara,2024-01-24 17:45,Insurance Premium,1993-12-28,390001,5000,Insurance,0
-9654321098,Vicky Rana,Gurgaon,2024-01-25 23:30,Night Shopping,1990-06-11,122001,18000,Shopping,1
-9765432109,Sakshi Bhat,Pune,2024-01-25 11:00,Coffee Shop,1996-04-20,411002,350,Food & Dining,0
-8654321098,Mohit Gupta,Mumbai,2024-01-26 05:15,ATM Transfer,1988-10-09,400051,42000,Cash Out / Transfer,1
-8765432210,Isha Reddy,Hyderabad,2024-01-26 14:30,Shopping Mall,1991-05-22,500031,12500,Shopping,0
-8876543321,Aryan Negi,Delhi,2024-01-27 10:45,Pharmacy,1994-01-16,110002,850,Healthcare,0
-8987654432,Riya Pathak,Bangalore,2024-01-27 18:20,Movie Theater,1995-08-03,560035,600,Entertainment,0
-9098765543,Sanjay Kulkarni,Kolkata,2024-01-28 02:00,Night Cab,1989-11-27,700001,3500,Travel,1
-9209876654,Priyanka Maurya,Lucknow,2024-01-28 13:15,Grocery Mart,1992-07-14,226002,1600,Groceries,0
-9320987765,Ashok Sharma,Kanpur,2024-01-29 09:30,Utility Bill,1986-03-05,208001,2500,Bills & Utilities,0
-9431098876,Neelam Singh,Jaipur,2024-01-29 16:00,Book Purchase,1993-09-18,302002,2000,Education,0
-9542109987,Gaurav Pandey,Chandigarh,2024-01-30 12:45,Restaurant,1990-02-25,160002,1800,Food & Dining,0
-9653210987,Manisha Verma,Ahmedabad,2024-01-30 20:15,Clothing Store,1994-12-10,380003,7500,Shopping,0
-9764321098,Rohit Saxena,Surat,2024-01-31 03:30,Money Transfer,1991-04-03,395002,45000,Cash Out / Transfer,1
-9875432109,Aarav Malhotra,Indore,2024-01-31 15:00,Supermarket,1995-10-12,452002,3000,Groceries,0
-9986543210,Swati Dutta,Bhopal,2024-02-01 10:20,Online Shopping,1988-06-19,462002,9000,Shopping,0
-8765432101,Harsh Verma,Vadodara,2024-02-01 14:30,Insurance,1992-01-08,390002,6500,Insurance,0
-8876543212,Sarita Iyer,Gurgaon,2024-02-02 01:45,Midnight Shopping,1989-08-22,122002,22000,Shopping,1
-8987654323,Vikrant Singh,Pune,2024-02-02 11:30,Cafe,1996-05-15,411003,400,Food & Dining,0
-9098765434,Nisha Kapoor,Mumbai,2024-02-03 04:00,Bank Transfer,1987-11-20,400052,55000,Cash Out / Transfer,1
-9209876545,Arjun Sinha,Hyderabad,2024-02-03 13:45,Shopping Center,1993-03-27,500032,11000,Shopping,0
+UPI_Number,Holder_Name,State,Transaction_DateTime,Seller_Name,Amount_Rs,Merchant_Category,Fraud_Label
+9876543210,Rajesh Kumar,Maharashtra,2024-01-15 14:30,ABC Electronics,5000,Shopping,0
+9123456789,Priya Sharma,Karnataka,2024-01-15 02:45,XYZ Convenience,25000,Cash Out / Transfer,1
+8765432109,Amit Patel,Gujarat,2024-01-16 10:15,Quick Meals,350,Food & Dining,0
+9012345678,Neha Verma,Delhi,2024-01-16 22:30,Late Night Store,8500,Shopping,1
+9234567890,Rohan Singh,Punjab,2024-01-17 09:45,Health Plus,2500,Healthcare,0
+9345678901,Anjali Gupta,Tamil Nadu,2024-01-17 15:20,Fashion Hub,15000,Shopping,0
+9456789012,Vikram Nair,Kerala,2024-01-18 11:00,Travel Booking,45000,Travel,1
+9567890123,Divya Reddy,Telangana,2024-01-18 19:30,Movie Tickets,800,Entertainment,0
+9678901234,Arjun Rao,Karnataka,2024-01-19 03:15,Night Market,12000,Groceries,1
+9789012345,Sneha Kapoor,Maharashtra,2024-01-19 13:45,Power Supply,1200,Bills & Utilities,0
+9801234567,Karan Malhotra,Maharashtra,2024-01-20 08:30,Medical Store,3500,Healthcare,0
+9912345678,Shruti Yadav,Telangana,2024-01-20 21:00,Petrol Pump,2000,Fuel,0
+8876543210,Harsh Dubey,Uttar Pradesh,2024-01-21 02:30,ATM Cash Out,50000,Cash Out / Transfer,1
+8987654321,Pooja Singh,Rajasthan,2024-01-21 14:15,Book Store,1800,Education,0
+9098765432,Rahul Verma,Punjab,2024-01-22 10:00,Restaurant,1500,Food & Dining,0
+9109876543,Zara Khan,Gujarat,2024-01-22 16:45,Fashion Store,8000,Shopping,0
+9210987654,Nikhil Joshi,Gujarat,2024-01-23 04:00,Late Night Transfer,35000,Cash Out / Transfer,1
+9321098765,Megha Chopra,Madhya Pradesh,2024-01-23 12:30,Grocery Store,2200,Groceries,0
+9432109876,Suresh Kumar,Madhya Pradesh,2024-01-24 09:15,Phone Recharge,500,Online Services,0
+9543210987,Ananya Desai,Gujarat,2024-01-24 17:45,Insurance Premium,5000,Insurance,0
+9654321098,Vicky Rana,Haryana,2024-01-25 23:30,Night Shopping,18000,Shopping,1
+9765432109,Sakshi Bhat,Maharashtra,2024-01-25 11:00,Coffee Shop,350,Food & Dining,0
+8654321098,Mohit Gupta,Maharashtra,2024-01-26 05:15,ATM Transfer,42000,Cash Out / Transfer,1
+8765432210,Isha Reddy,Telangana,2024-01-26 14:30,Shopping Mall,12500,Shopping,0
+8876543321,Aryan Negi,Delhi,2024-01-27 10:45,Pharmacy,850,Healthcare,0
+8987654432,Riya Pathak,Karnataka,2024-01-27 18:20,Movie Theater,600,Entertainment,0
+9098765543,Sanjay Kulkarni,West Bengal,2024-01-28 02:00,Night Cab,3500,Travel,1
+9209876654,Priyanka Maurya,Uttar Pradesh,2024-01-28 13:15,Grocery Mart,1600,Groceries,0
+9320987765,Ashok Sharma,Uttar Pradesh,2024-01-29 09:30,Utility Bill,2500,Bills & Utilities,0
+9431098876,Neelam Singh,Rajasthan,2024-01-29 16:00,Book Purchase,2000,Education,0
+9542109987,Gaurav Pandey,Punjab,2024-01-30 12:45,Restaurant,1800,Food & Dining,0
+9653210987,Manisha Verma,Gujarat,2024-01-30 20:15,Clothing Store,7500,Shopping,0
+9764321098,Rohit Saxena,Gujarat,2024-01-31 03:30,Money Transfer,45000,Cash Out / Transfer,1
+9875432109,Aarav Malhotra,Madhya Pradesh,2024-01-31 15:00,Supermarket,3000,Groceries,0
+9986543210,Swati Dutta,Madhya Pradesh,2024-02-01 10:20,Online Shopping,9000,Shopping,0
+8765432101,Harsh Verma,Gujarat,2024-02-01 14:30,Insurance,6500,Insurance,0
+8876543212,Sarita Iyer,Haryana,2024-02-02 01:45,Midnight Shopping,22000,Shopping,1
+8987654323,Vikrant Singh,Maharashtra,2024-02-02 11:30,Cafe,400,Food & Dining,0
+9098765434,Nisha Kapoor,Maharashtra,2024-02-03 04:00,Bank Transfer,55000,Cash Out / Transfer,1
+9209876545,Arjun Sinha,Telangana,2024-02-03 13:45,Shopping Center,11000,Shopping,0
+9320987656,Pooja Mehta,Karnataka,2024-02-04 09:30,Restaurant,1200,Food & Dining,0
+9431098767,Kunal Sharma,Delhi,2024-02-04 16:00,Grocery Store,2800,Groceries,0
+9542109878,Snehal Patel,Gujarat,2024-02-05 10:15,Shopping Mall,6000,Shopping,0
+9653210989,Ravi Kumar,Maharashtra,2024-02-05 23:00,ATM Withdrawal,38000,Cash Out / Transfer,1
+9764321090,Anita Singh,Tamil Nadu,2024-02-06 13:30,Pharmacy,1500,Healthcare,0
+9875432101,Sunny Malhotra,Punjab,2024-02-06 14:45,Gas Station,2200,Fuel,0
+9986543212,Deepika Reddy,Telangana,2024-02-07 03:45,Online Transfer,48000,Cash Out / Transfer,1
+8765432323,Vishal Yadav,Uttar Pradesh,2024-02-07 11:20,Book Store,1800,Education,0
+8876543434,Nandini Iyer,Kerala,2024-02-08 15:00,Restaurant,950,Food & Dining,0
+8987654545,Arjun Verma,Delhi,2024-02-08 17:30,Shopping Center,7500,Shopping,0
+9098765656,Priya Nair,Haryana,2024-02-09 02:15,Night Shopping,24000,Shopping,1
+9209876767,Sandeep Gupta,Madhya Pradesh,2024-02-09 12:00,Supermarket,3200,Groceries,0
+9320987878,Shruti Dutta,West Bengal,2024-02-10 14:30,Fashion Store,8500,Shopping,0
+9431098989,Harsh Pandey,Rajasthan,2024-02-10 10:00,Restaurant,1300,Food & Dining,0
+9542109090,Sweety Rao,Maharashtra,2024-02-11 04:30,ATM Cash Out,52000,Cash Out / Transfer,1
+9653210101,Nikhil Kulkarni,Karnataka,2024-02-11 09:45,Pharmacy,2100,Healthcare,0
+9764321212,Divya Singh,Tamil Nadu,2024-02-12 16:15,Clothing Store,9000,Shopping,0
+9875432323,Ashok Nair,Telangana,2024-02-12 11:30,Coffee Shop,450,Food & Dining,0
+9986543434,Jyoti Sharma,Gujarat,2024-02-13 18:00,Entertainment,1200,Entertainment,0
+8765432545,Rohan Desai,Punjab,2024-02-13 13:45,Health Clinic,3500,Healthcare,0
+8876543656,Meera Kapoor,Delhi,2024-02-14 08:30,Online Shopping,6500,Shopping,0
+8987654767,Vikram Reddy,Haryana,2024-02-14 22:00,Midnight Transfer,35000,Cash Out / Transfer,1
+9098765878,Anaya Patel,Uttar Pradesh,2024-02-15 14:20,Grocery Mart,2400,Groceries,0
+9209876989,Sushil Kumar,West Bengal,2024-02-15 15:30,Book Purchase,1700,Education,0
+9320988090,Isha Yadav,Maharashtra,2024-02-16 10:00,Restaurant,1600,Food & Dining,0
+9431099101,Karan Nair,Madhya Pradesh,2024-02-16 03:00,Night Market,18000,Shopping,1
+9542110212,Seema Dubey,Karnataka,2024-02-17 12:15,Pharmacy,2800,Healthcare,0
+9653221323,Aryan Malhotra,Rajasthan,2024-02-17 14:45,Clothing Store,7200,Shopping,0
+9764332434,Nisha Verma,Gujarat,2024-02-18 09:30,Gas Station,2100,Fuel,0
+9875443545,Gaurav Singh,Telangana,2024-02-18 21:30,ATM Transfer,44000,Cash Out / Transfer,1
+9986554656,Priya Chopra,Delhi,2024-02-19 13:00,Shopping Center,8000,Shopping,0
+8765665767,Rohit Patel,Tamil Nadu,2024-02-19 16:15,Restaurant,1450,Food & Dining,0
+8876776878,Ankita Reddy,Punjab,2024-02-20 11:45,Supermarket,3000,Groceries,0
+8987887989,Sanjay Nair,Haryana,2024-02-20 02:30,Midnight Shopping,26000,Shopping,1
+9098998090,Divya Gupta,Madhya Pradesh,2024-02-21 10:20,Online Store,5500,Shopping,0
+9200009101,Aarav Kumar,Maharashtra,2024-02-21 15:40,Pharmacy,1900,Healthcare,0
+9311110212,Meera Sharma,West Bengal,2024-02-22 09:00,Book Store,2200,Education,0
+9422221323,Harsh Iyer,Gujarat,2024-02-22 17:30,Coffee Shop,850,Food & Dining,0
+9533332434,Pooja Singh,Uttar Pradesh,2024-02-23 04:45,Bank Transfer,58000,Cash Out / Transfer,1
+9644443545,Ravi Desai,Karnataka,2024-02-23 12:30,Clothing Store,6800,Shopping,0
+9755554656,Sneha Nair,Rajasthan,2024-02-24 14:00,Entertainment,2500,Entertainment,0
+9866665767,Vishal Kapoor,Delhi,2024-02-24 11:15,Health Club,4200,Healthcare,0
+9977776878,Anita Yadav,Telangana,2024-02-25 03:15,ATM Withdrawal,41000,Cash Out / Transfer,1
+8888887989,Kunal Patel,Punjab,2024-02-25 13:45,Restaurant,1800,Food & Dining,0
+8999998090,Priyanka Nair,Tamil Nadu,2024-02-26 16:30,Shopping Mall,7800,Shopping,0
+9111109101,Ashok Kumar,Haryana,2024-02-26 10:00,Gas Station,2300,Fuel,0
+9222220212,Jyoti Reddy,Madhya Pradesh,2024-02-27 23:45,Midnight Store,19500,Shopping,1
+9333331323,Sushil Verma,Maharashtra,2024-02-27 14:20,Supermarket,3100,Groceries,0
+9444442434,Isha Malhotra,West Bengal,2024-02-28 09:30,Pharmacy,2600,Healthcare,0
+9555553545,Rohan Gupta,Gujarat,2024-02-28 15:15,Book Purchase,1950,Education,0
+9666664656,Meera Desai,Karnataka,2024-02-29 11:00,Restaurant,1500,Food & Dining,0
+9777775767,Nikita Singh,Uttar Pradesh,2024-02-29 05:30,ATM Transfer,47000,Cash Out / Transfer,1

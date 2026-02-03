@@ -26,12 +26,8 @@ df['Transaction_DateTime'] = pd.to_datetime(df['Transaction_DateTime'])
 df['hour'] = df['Transaction_DateTime'].dt.hour
 df['day_of_week'] = df['Transaction_DateTime'].dt.dayofweek
 
-df['Date_of_Birth'] = pd.to_datetime(df['Date_of_Birth'])
-current_year = datetime.now().year
-df['age'] = current_year - df['Date_of_Birth'].dt.year
-
 # Drop original date columns
-df = df.drop(['Transaction_DateTime', 'Date_of_Birth'], axis=1)
+df = df.drop(['Transaction_DateTime'], axis=1)
 
 # 3. Separate Features (X) and Target (y)
 X = df.drop('Fraud_Label', axis=1).values
