@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPI Fraud Detection System</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f3; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        h2 { color: #333; margin-bottom: 1.5rem; }
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background-color: #0056b3; }
+        .result { margin-top: 20px; font-weight: bold; color: #d9534f; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>UPI Fraud Guard</h2>
+        <form action="/predict" method="post">
+            <input type="number" name="amount" placeholder="Transaction Amount" required>
+            <select name="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="1">Entertainment</option>
+                <option value="2">Food/Groceries</option>
+                <option value="3">Shopping</option>
+                <option value="4">Cash Out / Transfer</option>
+            </select>
+            <input type="number" name="hour" placeholder="Hour (0-23)" min="0" max="23" required>
+            <input type="number" name="day" placeholder="Day of Week (1-7)" min="1" max="7" required>
+            <button type="submit">Analyze Transaction</button>
+        </form>
+        <div class="result">{{ prediction_text }}</div>
+    </div>
+</body>
+</html>

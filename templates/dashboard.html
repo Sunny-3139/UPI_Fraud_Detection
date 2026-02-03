@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection - Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .header .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .user-info span {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .logout-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .logout-btn:hover {
+            background: #ff5252;
+        }
+        
+        .main-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .main-card h2 {
+            color: #333;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .form-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-group input::placeholder {
+            color: #999;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 13px 40px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex-grow: 0;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .reset-btn {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 13px 40px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            flex-grow: 0;
+        }
+        
+        .reset-btn:hover {
+            background: #5a6268;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 0.95rem;
+        }
+        
+        .info-box strong {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .header .user-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .main-card {
+                padding: 1.5rem;
+            }
+            
+            .form-section {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .submit-btn,
+            .reset-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ UPI Fraud Guard</h1>
+            <div class="user-info">
+                <span>Welcome, <strong>{{ username }}</strong></span>
+                <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+            </div>
+        </div>
+        
+        <div class="main-card">
+            <h2>Transaction Analysis Form</h2>
+            
+            <div class="info-box">
+                <strong>ℹ️ Info:</strong> Please fill in all the transaction details below to detect potential fraud.
+            </div>
+            
+            <form method="POST" action="{{ url_for('predict') }}">
+                <div class="form-section">
+                    <!-- 1. UPI Number -->
+                    <div class="form-group">
+                        <label for="upi_number">1. Enter UPI Number</label>
+                        <input type="text" id="upi_number" name="upi_number" placeholder="e.g., yourname@upi" required>
+                    </div>
+                    
+                    <!-- 2. UPI Holder Name -->
+                    <div class="form-group">
+                        <label for="holder_name">2. UPI Holder Name</label>
+                        <input type="text" id="holder_name" name="holder_name" placeholder="e.g., John Doe" required>
+                    </div>
+                    
+                    <!-- 3. Select State -->
+                    <div class="form-group">
+                        <label for="state">3. Select State</label>
+                        <select id="state" name="state" required>
+                            <option value="">-- Select State --</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 4. Date and Time of Transaction -->
+                    <div class="form-group">
+                        <label for="trans_time">4. Enter Date and Time of Transaction</label>
+                        <input type="datetime-local" id="trans_time" name="trans_time" required>
+                    </div>
+                    
+                    <!-- 5. Seller Name -->
+                    <div class="form-group">
+                        <label for="seller_name">5. Enter Seller Name</label>
+                        <input type="text" id="seller_name" name="seller_name" placeholder="e.g., ABC Store" required>
+                    </div>
+                    
+                    <!-- 6. Date of Birth -->
+                    <div class="form-group">
+                        <label for="dob">6. Enter Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    
+                    <!-- 7. Pincode -->
+                    <div class="form-group">
+                        <label for="pin_code">7. Enter Pincode</label>
+                        <input type="text" id="pin_code" name="pin_code" placeholder="e.g., 110001" required>
+                    </div>
+                    
+                    <!-- 8. Transaction Amount -->
+                    <div class="form-group">
+                        <label for="amount">8. Enter Transaction Amount (₹)</label>
+                        <input type="number" id="amount" name="amount" placeholder="e.g., 5000" step="0.01" required>
+                    </div>
+                    
+                    <!-- 9. Merchant Category -->
+                    <div class="form-group">
+                        <label for="merchant_category">9. Select Merchant Category</label>
+                        <select id="merchant_category" name="merchant_category" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Food & Dining">Food & Dining</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Healthcare">Healthcare</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Bills & Utilities">Bills & Utilities</option>
+                            <option value="Insurance">Insurance</option>
+                            <option value="Education">Education</option>
+                            <option value="Cash Out / Transfer">Cash Out / Transfer</option>
+                            <option value="Online Services">Online Services</option>
+                            <option value="Fuel">Fuel</option>
+                            <option value="Groceries">Groceries</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="submit-btn">🔍 Analyze Transaction</button>
+                    <button type="reset" class="reset-btn">Clear Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
